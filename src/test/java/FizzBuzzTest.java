@@ -1,6 +1,7 @@
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 public class FizzBuzzTest {
 
@@ -45,5 +46,13 @@ public class FizzBuzzTest {
         Fizzbuzz fizzbuzz = new Fizzbuzz();
         String result = fizzbuzz.doFizzbuzz(15);
         assertEquals(result, "1 2 Fizz 4 Buzz Fizz 7 8 Fizz Buzz 11 Fizz 13 14 FizzBuzz");
+    }
+
+    @Test
+    public void test_100(){
+        Fizzbuzz fizzbuzz = new Fizzbuzz();
+        String result = fizzbuzz.doFizzbuzz(100);
+        System.out.print(result);
+        assertNotNull(result);
     }
 }
