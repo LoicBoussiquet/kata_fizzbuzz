@@ -12,31 +12,17 @@ public class Fizzbuzz {
     }
 
     private String evaluateNumber(int number) {
-        if (divideBy3(number) && divideBy5(number)) {
-            return "FizzBuzz";
-        }
-        if (divideBy3(number)) {
-            return "Fizz";
-        }
-        if (divideBy5(number)) {
-            return "Buzz";
-        }
-
+        if (divideBy3(number) && divideBy5(number)) return "FizzBuzz";
+        if (divideBy3(number)) return "Fizz";
+        if (divideBy5(number)) return "Buzz";
         return String.valueOf(number);
-
     }
 
     private boolean divideBy3(int number) {
-        if (number % 3 == 0) {
-            return true;
-        }
-        return false;
+        return number % 3 == 0;
     }
 
     private boolean divideBy5(int number) {
-        if (number % 5 == 0) {
-            return true;
-        }
-        return false;
+        return number % 5 == 0;
     }
 }
